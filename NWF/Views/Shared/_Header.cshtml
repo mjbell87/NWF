@@ -11,14 +11,14 @@
 <div class="navbar navbar-inverse">
     <div class="container">
 
-        <a class="navbar-brand navbar-right mui-store-name" href="@storeRoot.Url">@Umbraco.Field("storeName", recursive: true)</a>
+
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar">Test</span>
+                <span class="icon-bar">Test2</span>
+                <span class="icon-bar">TEst3</span>
             </button>
         </div>
 
@@ -38,16 +38,12 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right mui-nav-right">
-                <li@(IsActive(basketPage.Id))>
-                    <a href="@basketPage.Url"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> @basketPage.Name (<span data-muilabel="basketcount">@CurrentCustomer.Basket().TotalQuantityCount</span>)</a>
-                </li>
-
                 <li@(IsActive(accountPage.Id, !CurrentCustomer.IsAnonymous))>
                     <a href="@accountPage.Url">
                         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                         @if (CurrentCustomer.IsAnonymous)
                         {
-                            <span>Login</span>
+                            <span>Login/Register</span>
                         }
                         else
                         {
@@ -55,19 +51,23 @@
                             <span>@customer.FirstName @customer.LastName</span>
                         }
                     </a>
-                </li>
-                @if (!CurrentCustomer.IsAnonymous)
-                {
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="@ExampleUiHelper.Content.GetChangePassword().Url">Change Password</a></li> @* this should be softcoded via ExampleUIHelper *@
-                            <li>@Html.ActionLink("Logout", "Logout", "CustomerMembership", new { area = "FastTrack", redirectId = Model.Content.Id }, null)</li>
-                        </ul>
                     </li>
-                }
-                <li @(!CurrentCustomer.Basket().Items.Any() ? MvcHtmlString.Create("class=\"mui-quickcheckout\"") : MvcHtmlString.Empty) data-value="quickcheckout"><a href="@ExampleUiHelper.Content.GetCheckout().Url" class="success">Quick Checkout</a></li>
-            </ul>
+                    @if (!CurrentCustomer.IsAnonymous)
+                    {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="@ExampleUiHelper.Content.GetChangePassword().Url">Change Password</a></li> @* this should be softcoded via ExampleUIHelper *@
+                                <li>@Html.ActionLink("Logout", "Logout", "CustomerMembership", new { area = "FastTrack", redirectId = Model.Content.Id }, null)</li>
+                            </ul>
+                        </li>
+                    }
+                           @*<a class="navbar-brand navbar-right mui-store-name" href="@storeRoot.Url">@Umbraco.Field("storeName", recursive: true)</a>*@
+
+                    <li@(IsActive(basketPage.Id))>
+                        <a href="@basketPage.Url"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> @basketPage.Name (<span data-muilabel="basketcount">@CurrentCustomer.Basket().TotalQuantityCount</span>)</a>
+                        </li>
+</ul>
 
         </div>
     </div>

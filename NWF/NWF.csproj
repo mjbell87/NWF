@@ -748,6 +748,7 @@
     <Content Include="App_Plugins\Merchello\views\web.config" />
     <Content Include="App_Browsers\Form.browser" />
     <Content Include="App_Browsers\w3cvalidator.browser" />
+    <Content Include="DB_Backup\nwfUmbraco_db.bak" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.creditCardValidator.js" />
@@ -2160,6 +2161,25 @@
     <Content Include="Umbraco_Client\Ui\knockout.js" />
     <Content Include="Umbraco_Client\Ui\knockout.mapping.js" />
     <Content Include="Web.config" />
+    <Content Include="Views\FastTrack.cshtml" />
+    <Content Include="Views\ftAccount.cshtml" />
+    <Content Include="Views\ftBasket.cshtml" />
+    <Content Include="Views\ftBillingAddress.cshtml" />
+    <Content Include="Views\ftCatalog.cshtml" />
+    <Content Include="Views\ftCategory.cshtml" />
+    <Content Include="Views\ftChangePassword.cshtml" />
+    <Content Include="Views\ftCheckout.cshtml" />
+    <Content Include="Views\ftFinalSaleSummary.cshtml" />
+    <Content Include="Views\ftForgotPassword.cshtml" />
+    <Content Include="Views\ftLogin.cshtml" />
+    <Content Include="Views\ftPayment.cshtml" />
+    <Content Include="Views\ftPaymentMethod.cshtml" />
+    <Content Include="Views\ftPreSaleSummary.cshtml" />
+    <Content Include="Views\ftProduct.cshtml" />
+    <Content Include="Views\ftReceipt.cshtml" />
+    <Content Include="Views\ftShippingAddress.cshtml" />
+    <Content Include="Views\ftShipRateQuote.cshtml" />
+    <Content Include="Views\ftStore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
