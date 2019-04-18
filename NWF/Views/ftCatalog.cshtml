@@ -5,7 +5,7 @@
 @using Merchello.Web.Models
 @using Merchello.Web.Models.Ui.Rendering
 @{
-    Layout = "FastTrack.cshtml";
+    Layout = "index.cshtml";
 
     var title = Model.Categories == null ? Model.Name : Model.Categories.Name;
     var categories = Model.Categories != null ? Model.Categories.Children().ToArray() : Enumerable.Empty<IProductCollection>();

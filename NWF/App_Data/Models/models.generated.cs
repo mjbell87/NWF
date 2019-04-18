@@ -19,12 +19,12 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "bb083fdb72ebcc18")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "becfdc524fc6dc11")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>FastTrack</summary>
+	/// <summary>Root</summary>
 	[PublishedContentModel("fastTrack")]
 	public partial class FastTrack : PublishedContentModel
 	{
@@ -77,7 +77,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftAccount</summary>
+	/// <summary>Account</summary>
 	[PublishedContentModel("ftAccount")]
 	public partial class FtAccount : FastTrack
 	{
@@ -121,7 +121,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftBasket</summary>
+	/// <summary>Basket</summary>
 	[PublishedContentModel("ftBasket")]
 	public partial class FtBasket : FastTrack
 	{
@@ -147,7 +147,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftCatalog</summary>
+	/// <summary>Catalog</summary>
 	[PublishedContentModel("ftCatalog")]
 	public partial class FtCatalog : FastTrack
 	{
@@ -182,7 +182,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftCategory</summary>
+	/// <summary>Category</summary>
 	[PublishedContentModel("ftCategory")]
 	public partial class FtCategory : FastTrack
 	{
@@ -235,7 +235,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftChangePassword</summary>
+	/// <summary>ChangePassword</summary>
 	[PublishedContentModel("ftChangePassword")]
 	public partial class FtChangePassword : FastTrack
 	{
@@ -279,7 +279,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftCheckout</summary>
+	/// <summary>Checkout</summary>
 	[PublishedContentModel("ftCheckout")]
 	public partial class FtCheckout : FastTrack
 	{
@@ -332,7 +332,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftForgotPassword</summary>
+	/// <summary>ForgotPassword</summary>
 	[PublishedContentModel("ftForgotPassword")]
 	public partial class FtForgotPassword : FastTrack
 	{
@@ -376,7 +376,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftLogin</summary>
+	/// <summary>Login</summary>
 	[PublishedContentModel("ftLogin")]
 	public partial class FtLogin : FastTrack
 	{
@@ -420,7 +420,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftProduct</summary>
+	/// <summary>Product</summary>
 	[PublishedContentModel("ftProduct")]
 	public partial class FtProduct : FastTrack
 	{
@@ -482,7 +482,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftReceipt</summary>
+	/// <summary>Receipt</summary>
 	[PublishedContentModel("ftReceipt")]
 	public partial class FtReceipt : FastTrack
 	{
@@ -526,7 +526,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>ftStore</summary>
+	/// <summary>Store</summary>
 	[PublishedContentModel("ftStore")]
 	public partial class FtStore : FastTrack
 	{
